@@ -1,5 +1,8 @@
-<?php
 
+<?php
+// Sql table column name    
+// machineTokenUpdate
+// machineToken
 if($b['machineTokenUpdate'] == 'yes'){
     if(mysqli_query($connection,"UPDATE usertable SET machineToken='$newToken', machineTokenUpdate='no' WHERE operator_uid='$operator_uid' ")){
         setcookie("machineToken", $newToken, time() + ( 365 * 24 * 60 * 60),'/');
